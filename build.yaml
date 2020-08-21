@@ -1,0 +1,59 @@
+##clone git repo
+- hosts: localhost
+  tasks:
+    - name: install dockerd 
+      yum: 
+       name:  "{{ packages }}"
+      vars: 
+       packages: 
+       - docker-engine
+       - git
+       -  python-pip
+       state: present
+    - name: Start service dockerd
+      service:
+       name: docker
+       state: started
+    - name: Install pip
+      yum:
+       name: python-pip
+       state: present
+    - name: Install docker-py
+      pip: name=docker-py
+    - name: Clone repository
+      git:
+       repo: https://github.com/thimmappanarala/mediawiki-tw.git
+       dest: /root/mediawiki-tw
+       force: yes
+    - name: Change file ownership, group and permissions
+      file:
+        path: /root/mediawiki-tw
+        mode: '0777'
+        recurse: yes
+    - name: Build an image for httpd-php
+      docker_image:
+        build:
+          path: /root/mediawiki-tw/dockerfiles/httpd-php
+        name: httpd-php-twi
+        tag: v1
+        source: build
+        pull: no
+    - name: Build an image for mariadb
+      docker_image:
+       build:
+         path: /root/mediawiki-tw/dockerfiles/mariadb
+       name: mariadb-twi
+       tag: v1
+       source: build
+       state: present
+       pull: no
+    - name: Build mariadb Container & php and port
+      shell: docker run -d --name mariadb-tw-v1 -p 3306:3306 mariadb-twi:v1
+    - name: cp file to container
+      shell: docker cp /root/mediawiki-tw/dockerfiles/mariadb/mariadb.sql mariadb-tw-v1:/root
+    - name: start httpd and php
+      shell: docker run -d --name httpd-php-v1 -p 80:80 httpd-php-twi:v1
+    - name: start php-fpm
+      command: docker exec -it httpd-php-v1 php-fpm
+    - name: execute sql for db
+      command: docker exec -it mariadb-tw-v1 sh -c /root/mariadb.sql
