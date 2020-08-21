@@ -1,0 +1,8 @@
+#cloud-config
+runcmd:
+-   cd /etc/yum.repos.d/
+-   wget http://yum.oracle.com/public-yum-ol7.repo
+-   /bin/yum install docker-engine
+-   /bin/systemctl start docker
+-   /bin/systemctl enable docker
+-   /bin/firewall-offline-cmd --add-port=80/tcp
