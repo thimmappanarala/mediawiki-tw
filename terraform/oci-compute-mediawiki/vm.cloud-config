@@ -1,25 +1,8 @@
 #cloud-config
-write_files:
--   content: |
-      FROM oraclelinux:8.2
-      RUN  yum -y install httpd php php-mysqlnd php-gd php-xml php-mbstring php-json php-fpm tar firewalld
-      WORKDIR /var/www
-      ADD https://releases.wikimedia.org/mediawiki/1.34/mediawiki-1.34.2.tar.gz .
-      RUN tar -zxf mediawiki-1.34.2.tar.gz && ln -s mediawiki-1.34.2/ mediawiki && chown -R apache:apache /var/www/mediawiki-1.34.2 && systemctl enable httpd
-     #RUN firewall-cmd --permanent --zone=public --add-service=http && firewall-cmd --permanent --zone=public --add-service=https && systemctl restart firewalld
-      RUN restorecon -FR /var/www/mediawiki-1.34.2/ && restorecon -FR /var/www/mediawiki
-      RUN sed -i 's,/var/www/html,/var/www/mediawiki,g' /etc/httpd/conf/httpd.conf && sed -i 's,index.html,index.html index.html.var index.php,g' /etc/httpd/conf/httpd.conf && mkdir -p /run/php-fpm/
-      ENTRYPOINT ["/usr/sbin/httpd", "-DFOREGROUND"]
-    owner: root:root
-    path: /home/opc/httpd-php.Dockerfile
 runcmd:
--   /bin/yum install -y docker-engine
--   /bin/systemctl start docker
+-   /bin/yum install -y ansible
 -   /bin/firewall-offline-cmd --add-port=80/tcp
--   /bin/systemctl restart firewalld
--   /bin/systemctl/enable docker
--   /sbin/service start docker
--   /bin/cd /home/opc/
--   /bin/docker build -t httpd-php-tw:v1 . -f httpd-php.Dockerfile
--   /bin/docker docker -d --name mariadb-tw-v1 -p 3306:3306 mariadb-tw:v1
+-   cd /root
+-   git clone https://github.com/thimmappanarala/mediawiki-tw.git 
+-   ansible-playbook /root/mediawiki-tw/build.yaml
 
