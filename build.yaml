@@ -54,6 +54,6 @@
     - name: start httpd and php
       shell: docker run -d --name httpd-php-v1 -p 80:80 httpd-php-twi:v1
     - name: start php-fpm
-      command: docker exec -it httpd-php-v1 php-fpm
+      command: docker exec  httpd-php-v1 php-fpm
     - name: execute sql for db
-      command: docker exec -it mariadb-tw-v1 sh -c /root/mariadb.sql
+      command: docker exec  mariadb-tw-v1 sh -c /root/mariadb.sql
