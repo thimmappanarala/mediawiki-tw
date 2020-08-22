@@ -20,6 +20,23 @@ resource "oci_core_instance" "mediawiki_vm" {
     user_data = "${base64encode(file("vm.cloud-config"))}"
   }
   timeouts {
-    create = "5m"
+    create = "10m"
+  }
+  provisioner "remote-exec" {
+    connection {
+    agent       = false
+    timeout     = "30m"
+    type        = "ssh"
+    host        = "${self.public_ip}"
+    user        = "opc"
+    private_key = "${file(".ssh/id_rsa_openssh")}"
+    }
+ 
+    inline = [
+      "sudo yum install -y git",
+      "sudo git clone https://github.com/thimmappanarala/mediawiki-tw.git /root/mediawiki-tw",
+      "sudo ansible-playbook /root/mediawiki-tw/build.yaml",
+      "sudo docker exec  mariadb-tw-v1 sh -c /root/mariadb.sql",
+    ]
   }
 }
