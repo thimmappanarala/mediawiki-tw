@@ -36,7 +36,7 @@ resource "oci_core_instance" "mediawiki_vm" {
       "sudo yum install -y git",
       "sudo git clone https://github.com/thimmappanarala/mediawiki-tw.git /root/mediawiki-tw",
       "sudo ansible-playbook /root/mediawiki-tw/build.yaml",
-      "sudo docker exec  mariadb-tw-v1 sh -c /root/mariadb.sql",
+      "sudo ansible-playbook /root/mediawiki-tw/mariadb_sql.yaml",
     ]
   }
 }

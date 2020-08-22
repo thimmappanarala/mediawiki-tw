@@ -1,0 +1,4 @@
+- hosts: localhost
+  tasks:
+    - name: execute sql for db
+      command: docker exec  mariadb-tw-v1 sh -c /root/mariadb.sql
