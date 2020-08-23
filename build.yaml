@@ -49,8 +49,6 @@
        pull: no
     - name: Build mariadb Container & php and port
       shell: docker run -d --name mariadb-tw-v1 -p 3306:3306 mariadb-twi:v1
-    - name: cp file to container
-      shell: docker cp /root/mediawiki-tw/dockerfiles/mariadb/mariadb.sql mariadb-tw-v1:/root
     - name: start httpd and php
       shell: docker run -d --name httpd-php-v1 -p 80:80 httpd-php-twi:v1
     - name: start php-fpm
