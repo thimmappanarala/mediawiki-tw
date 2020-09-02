@@ -1,8 +1,8 @@
 {
   "version": 4,
   "terraform_version": "0.13.0",
-  "serial": 9,
-  "lineage": "81b79b04-d5c8-1782-00da-2461cccc687e",
+  "serial": 8,
+  "lineage": "2c9d9357-6bed-1d4e-e837-50e1b7a34d0c",
   "outputs": {
     "OEL_images": {
       "value": [
@@ -451,10 +451,10 @@
         {
           "schema_version": 0,
           "attributes": {
-            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
             "display_name": null,
             "filter": null,
-            "id": "2020-09-02 07:20:29.31792335 +0000 UTC",
+            "id": "2020-09-02 07:18:19.609870892 +0000 UTC",
             "images": [
               {
                 "agent_features": [],
@@ -840,10 +840,10 @@
         {
           "schema_version": 0,
           "attributes": {
-            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
             "display_name": null,
             "filter": null,
-            "id": "2020-09-02 07:20:29.305058802 +0000 UTC",
+            "id": "2020-09-02 07:18:19.670746127 +0000 UTC",
             "images": [
               {
                 "agent_features": [],
@@ -1231,24 +1231,24 @@
           "attributes": {
             "availability_domains": [
               {
-                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
                 "id": "ocid1.availabilitydomain.oc1..aaaaaaaauvt2n7pijol7uqgdnnsoojcukrijtmcltvfwxazmitk235wyohta",
-                "name": "ljKK:US-ASHBURN-AD-1"
+                "name": "HKve:US-ASHBURN-AD-1"
               },
               {
-                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
                 "id": "ocid1.availabilitydomain.oc1..aaaaaaaaztunlny6ae4yw2vghp5go2zceaonwp6wiioe3tnh2vlaxjjl2n3a",
-                "name": "ljKK:US-ASHBURN-AD-2"
+                "name": "HKve:US-ASHBURN-AD-2"
               },
               {
-                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+                "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
                 "id": "ocid1.availabilitydomain.oc1..aaaaaaaatrwxaogr7dl4yschqtrmqrdv6uzis3mgbnomiagqrfhcb7mxsfdq",
-                "name": "ljKK:US-ASHBURN-AD-3"
+                "name": "HKve:US-ASHBURN-AD-3"
               }
             ],
-            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa3wlcifoq6kyl4wmfft7xm7ssp4oz67qxl4lulqvpukchlenat5cq",
+            "compartment_id": "ocid1.tenancy.oc1..aaaaaaaa6hqeaaiu4j6osmqi3e4e5ncq7e7sa5ydzzd33bquycny3rbxvwpq",
             "filter": null,
-            "id": "2020-09-02 07:20:29.412030249 +0000 UTC"
+            "id": "2020-09-02 07:18:19.744667375 +0000 UTC"
           }
         }
       ]
@@ -1258,121 +1258,7 @@
       "type": "oci_core_instance",
       "name": "mediawiki_vm",
       "provider": "provider[\"registry.terraform.io/hashicorp/oci\"]",
-      "instances": [
-        {
-          "status": "tainted",
-          "schema_version": 0,
-          "attributes": {
-            "agent_config": [
-              {
-                "is_management_disabled": false,
-                "is_monitoring_disabled": false
-              }
-            ],
-            "availability_config": [
-              {
-                "recovery_action": "RESTORE_INSTANCE"
-              }
-            ],
-            "availability_domain": "ljKK:US-ASHBURN-AD-1",
-            "boot_volume_id": "ocid1.bootvolume.oc1.iad.abuwcljrqmsdouitzyqk27s5epf7t27no7liyg3vwo2t5qsqgvfi7bfplp6a",
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
-            "create_vnic_details": [
-              {
-                "assign_public_ip": "true",
-                "defined_tags": {
-                  "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-                  "Oracle-Tags.CreatedOn": "2020-09-02T07:20:31.663Z"
-                },
-                "display_name": "primary-vnic",
-                "freeform_tags": {},
-                "hostname_label": "mediawiki",
-                "nsg_ids": null,
-                "private_ip": "192.168.10.2",
-                "skip_source_dest_check": false,
-                "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaa5bolze6cmatn3vu7xrl6glfetyamala2uc35wolaxqkfh5clrdyq",
-                "vlan_id": ""
-              }
-            ],
-            "dedicated_vm_host_id": null,
-            "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:31.429Z"
-            },
-            "display_name": "mediawiki-vm",
-            "extended_metadata": null,
-            "fault_domain": "FAULT-DOMAIN-3",
-            "freeform_tags": {},
-            "hostname_label": "mediawiki",
-            "id": "ocid1.instance.oc1.iad.anuwcljrw3ikaaqcr2qqdvvipolhosdkjiqhzavjxw4isdrnon75x44b43la",
-            "image": "ocid1.image.oc1.iad.aaaaaaaakcggae4tjdluuizz2if7zivhk2ch47yiqyrrhr7qgygchu7ddyla",
-            "ipxe_script": null,
-            "is_pv_encryption_in_transit_enabled": null,
-            "launch_mode": "NATIVE",
-            "launch_options": [
-              {
-                "boot_volume_type": "PARAVIRTUALIZED",
-                "firmware": "UEFI_64",
-                "is_consistent_volume_naming_enabled": true,
-                "is_pv_encryption_in_transit_enabled": false,
-                "network_type": "PARAVIRTUALIZED",
-                "remote_data_volume_type": "PARAVIRTUALIZED"
-              }
-            ],
-            "metadata": {
-              "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArVZFldun4HYdYSUUm+FpO/XMyMO7MKImnKo9rl4j1ROFxqN7gMomiX9gOq5/+jakL60w3NbudprCJDcAR5KWVeSbjQ8HCsW6Z1gPtNhiho15Nt8mMGbZ+a6gPUsdJd9muOqBh09WL/SgDGpDMNmXpGDUWn927keixOX8F2tFbmuK/u9aZ5ST5En934AFIahoYd9ssrd3UzDpT0hdsL4BekzPZI+rO8ed1oIplTH1CAXIiVJqL33RNCaGMpW1hD7WO+YGhHGfTNy6tkvt8f12nlAW67W4IHg6QC1pxM9prrwum0OSt17IWdX7dBxVQaenFlFJzo9XI7o9nla2zjO3HQ== rsa-key-20190528\n",
-              "user_data": "I2Nsb3VkLWNvbmZpZwpydW5jbWQ6Ci0gICAvYmluL3l1bSBpbnN0YWxsIC15IGFuc2libGUKLSAgIC9iaW4vZmlyZXdhbGwtb2ZmbGluZS1jbWQgLS1hZGQtcG9ydD04MC90Y3AKLSAgIGNkIC9yb290Ci0gICBnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL3RoaW1tYXBwYW5hcmFsYS9tZWRpYXdpa2ktdHcuZ2l0IAotICAgYW5zaWJsZS1wbGF5Ym9vayAvcm9vdC9tZWRpYXdpa2ktdHcvYnVpbGQueWFtbAoK"
-            },
-            "preserve_boot_volume": null,
-            "private_ip": "192.168.10.2",
-            "public_ip": "129.213.81.207",
-            "region": "iad",
-            "shape": "VM.Standard2.1",
-            "shape_config": [
-              {
-                "gpu_description": "",
-                "gpus": 0,
-                "local_disk_description": "",
-                "local_disks": 0,
-                "local_disks_total_size_in_gbs": 0,
-                "max_vnic_attachments": 2,
-                "memory_in_gbs": 15,
-                "networking_bandwidth_in_gbps": 1,
-                "ocpus": 1,
-                "processor_description": "2.0 GHz Intel® Xeon® Platinum 8167M (Skylake)"
-              }
-            ],
-            "source_details": [
-              {
-                "boot_volume_size_in_gbs": "47",
-                "kms_key_id": "",
-                "source_id": "ocid1.image.oc1.iad.aaaaaaaakcggae4tjdluuizz2if7zivhk2ch47yiqyrrhr7qgygchu7ddyla",
-                "source_type": "image"
-              }
-            ],
-            "state": "RUNNING",
-            "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaa5bolze6cmatn3vu7xrl6glfetyamala2uc35wolaxqkfh5clrdyq",
-            "system_tags": {},
-            "time_created": "2020-09-02 07:20:32.76 +0000 UTC",
-            "time_maintenance_reboot_due": "",
-            "timeouts": {
-              "create": "10m",
-              "delete": null,
-              "update": null
-            }
-          },
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NzIwMDAwMDAwMDAwMCwidXBkYXRlIjo3MjAwMDAwMDAwMDAwfX0=",
-          "dependencies": [
-            "data.oci_core_images.oel",
-            "data.oci_identity_availability_domains.ads",
-            "oci_core_internet_gateway.mediawiki_igw",
-            "oci_core_route_table.mediawiki_rt",
-            "oci_core_security_list.mediawiki_sl",
-            "oci_core_subnet.mediawiki_subnet",
-            "oci_core_virtual_network.mediawiki_vcn"
-          ]
-        }
-      ]
+      "instances": []
     },
     {
       "mode": "managed",
@@ -1383,19 +1269,19 @@
         {
           "schema_version": 0,
           "attributes": {
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaa4xosvfl2h2lu3qsay7sx5eh7yvg7gt7lg456tffupqggnqbxm3ea",
             "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:30.182Z"
+              "Oracle-Tags.CreatedBy": "99555784-lab.user01",
+              "Oracle-Tags.CreatedOn": "2020-09-02T07:18:20.582Z"
             },
             "display_name": "mediawiki-igw",
             "enabled": true,
             "freeform_tags": {},
-            "id": "ocid1.internetgateway.oc1.iad.aaaaaaaak4cpymyzqmsodizudwwg2tdjxem2fi76cfpqdsqdbpfxtzayas5q",
+            "id": "ocid1.internetgateway.oc1.iad.aaaaaaaa7p5ovibgpp3o727nutu6o35kzro4gi35jshmv73bfebtghj3vo6a",
             "state": "AVAILABLE",
-            "time_created": "2020-09-02 07:20:30.223 +0000 UTC",
+            "time_created": "2020-09-02 07:18:20.628 +0000 UTC",
             "timeouts": null,
-            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaaw3ikaaqak3u57mvtvpmvtjpejjvyji7ruavo6wow6wnhkyslb2pq"
+            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaalwlrxmyaddzl6adtry6rtfq4vtnfjwiekoalg7vznz75crz77vlq"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo5MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwLCJ1cGRhdGUiOjkwMDAwMDAwMDAwMH19",
           "dependencies": [
@@ -1413,27 +1299,27 @@
         {
           "schema_version": 0,
           "attributes": {
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaa4xosvfl2h2lu3qsay7sx5eh7yvg7gt7lg456tffupqggnqbxm3ea",
             "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:30.401Z"
+              "Oracle-Tags.CreatedBy": "99555784-lab.user01",
+              "Oracle-Tags.CreatedOn": "2020-09-02T07:18:20.819Z"
             },
             "display_name": "mediawiki-rt",
             "freeform_tags": {},
-            "id": "ocid1.routetable.oc1.iad.aaaaaaaatyqfqo54h23hckkx3uwd6zpaedhtojkysrdc6x7c6z3ibxylqtqq",
+            "id": "ocid1.routetable.oc1.iad.aaaaaaaacujhhdyi2aa7fe54mvrxr5qg7zl2wb3jjchlhqmu7rqv4ephoqhq",
             "route_rules": [
               {
                 "cidr_block": "",
                 "description": "",
                 "destination": "0.0.0.0/0",
                 "destination_type": "CIDR_BLOCK",
-                "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaak4cpymyzqmsodizudwwg2tdjxem2fi76cfpqdsqdbpfxtzayas5q"
+                "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaa7p5ovibgpp3o727nutu6o35kzro4gi35jshmv73bfebtghj3vo6a"
               }
             ],
             "state": "AVAILABLE",
-            "time_created": "2020-09-02 07:20:30.429 +0000 UTC",
+            "time_created": "2020-09-02 07:18:20.859 +0000 UTC",
             "timeouts": null,
-            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaaw3ikaaqak3u57mvtvpmvtjpejjvyji7ruavo6wow6wnhkyslb2pq"
+            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaalwlrxmyaddzl6adtry6rtfq4vtnfjwiekoalg7vznz75crz77vlq"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo5MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwLCJ1cGRhdGUiOjkwMDAwMDAwMDAwMH19",
           "dependencies": [
@@ -1452,10 +1338,10 @@
         {
           "schema_version": 0,
           "attributes": {
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaa4xosvfl2h2lu3qsay7sx5eh7yvg7gt7lg456tffupqggnqbxm3ea",
             "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:30.221Z"
+              "Oracle-Tags.CreatedBy": "99555784-lab.user01",
+              "Oracle-Tags.CreatedOn": "2020-09-02T07:18:20.608Z"
             },
             "display_name": "mediawiki-sl",
             "egress_security_rules": [
@@ -1471,7 +1357,7 @@
               }
             ],
             "freeform_tags": {},
-            "id": "ocid1.securitylist.oc1.iad.aaaaaaaafl3dacglvac6nci2uz2pt7ld7negifwbuldwvhz6thrxlfza63oa",
+            "id": "ocid1.securitylist.oc1.iad.aaaaaaaaa5irda5louecbd23fgvaxpmqnkxzeb2wijmzxpuucwbe2zw3pgsa",
             "ingress_security_rules": [
               {
                 "description": "",
@@ -1485,9 +1371,9 @@
               }
             ],
             "state": "AVAILABLE",
-            "time_created": "2020-09-02 07:20:30.254 +0000 UTC",
+            "time_created": "2020-09-02 07:18:20.632 +0000 UTC",
             "timeouts": null,
-            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaaw3ikaaqak3u57mvtvpmvtjpejjvyji7ruavo6wow6wnhkyslb2pq"
+            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaalwlrxmyaddzl6adtry6rtfq4vtnfjwiekoalg7vznz75crz77vlq"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo5MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwLCJ1cGRhdGUiOjkwMDAwMDAwMDAwMH19",
           "dependencies": [
@@ -1505,33 +1391,33 @@
         {
           "schema_version": 0,
           "attributes": {
-            "availability_domain": "ljKK:US-ASHBURN-AD-1",
+            "availability_domain": "HKve:US-ASHBURN-AD-1",
             "cidr_block": "192.168.10.0/30",
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaa4xosvfl2h2lu3qsay7sx5eh7yvg7gt7lg456tffupqggnqbxm3ea",
             "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:30.704Z"
+              "Oracle-Tags.CreatedBy": "99555784-lab.user01",
+              "Oracle-Tags.CreatedOn": "2020-09-02T07:18:21.120Z"
             },
-            "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaacqx6czbnu76s27atfdrp3pxfjoogh7hg66bhdyg4wzqfgn6g37ga",
+            "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaa5ibgcevzyrhlvpj6aqvb2ilp7psrnygyhgtxp32oer6gwl6svugq",
             "display_name": "mediawiki-subnet",
             "dns_label": "mediawikisubnet",
             "freeform_tags": {},
-            "id": "ocid1.subnet.oc1.iad.aaaaaaaa5bolze6cmatn3vu7xrl6glfetyamala2uc35wolaxqkfh5clrdyq",
+            "id": "ocid1.subnet.oc1.iad.aaaaaaaavxobqmc7vyrehikcgfse3iryp7duz4jfzvzmr25smdsomws2vylq",
             "ipv6cidr_block": null,
             "ipv6public_cidr_block": null,
             "ipv6virtual_router_ip": null,
             "prohibit_public_ip_on_vnic": false,
-            "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaatyqfqo54h23hckkx3uwd6zpaedhtojkysrdc6x7c6z3ibxylqtqq",
+            "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaacujhhdyi2aa7fe54mvrxr5qg7zl2wb3jjchlhqmu7rqv4ephoqhq",
             "security_list_ids": [
-              "ocid1.securitylist.oc1.iad.aaaaaaaafl3dacglvac6nci2uz2pt7ld7negifwbuldwvhz6thrxlfza63oa"
+              "ocid1.securitylist.oc1.iad.aaaaaaaaa5irda5louecbd23fgvaxpmqnkxzeb2wijmzxpuucwbe2zw3pgsa"
             ],
             "state": "AVAILABLE",
             "subnet_domain_name": "mediawikisubnet.mediawiki.oraclevcn.com",
-            "time_created": "2020-09-02 07:20:30.776 +0000 UTC",
+            "time_created": "2020-09-02 07:18:21.186 +0000 UTC",
             "timeouts": null,
-            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaaw3ikaaqak3u57mvtvpmvtjpejjvyji7ruavo6wow6wnhkyslb2pq",
+            "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaalwlrxmyaddzl6adtry6rtfq4vtnfjwiekoalg7vznz75crz77vlq",
             "virtual_router_ip": "192.168.10.1",
-            "virtual_router_mac": "00:00:17:59:3C:62"
+            "virtual_router_mac": "00:00:17:30:CF:46"
           },
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo5MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwLCJ1cGRhdGUiOjkwMDAwMDAwMDAwMH19",
           "dependencies": [
@@ -1554,23 +1440,23 @@
           "schema_version": 0,
           "attributes": {
             "cidr_block": "192.168.10.0/24",
-            "compartment_id": "ocid1.compartment.oc1..aaaaaaaakqlagjzxpzm54gxnuwqgkhm5pnrmtuolzs6lnhhi2qd2qnmbqkzq",
-            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaacqx6czbnu76s27atfdrp3pxfjoogh7hg66bhdyg4wzqfgn6g37ga",
-            "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaae4bvs4a354edud77k7wllpfqkfptltxpx2c4lgpjatjetrsonwsq",
-            "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaapd2dofco4odt35rc4xcsktjiioqjwbsgjraa7jeswf5xk72pmfsq",
+            "compartment_id": "ocid1.compartment.oc1..aaaaaaaa4xosvfl2h2lu3qsay7sx5eh7yvg7gt7lg456tffupqggnqbxm3ea",
+            "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaa5ibgcevzyrhlvpj6aqvb2ilp7psrnygyhgtxp32oer6gwl6svugq",
+            "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaavizko77bmv3eqz2pcl67lk4uneay7rwv25si5b7lxanbjg76q2ua",
+            "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaa37rzrme75luxnjj5mn56widsjwwgfngxkv4monszk2tsi4cc43yq",
             "defined_tags": {
-              "Oracle-Tags.CreatedBy": "99552256-lab.user01",
-              "Oracle-Tags.CreatedOn": "2020-09-02T07:20:29.855Z"
+              "Oracle-Tags.CreatedBy": "99555784-lab.user01",
+              "Oracle-Tags.CreatedOn": "2020-09-02T07:18:20.167Z"
             },
             "display_name": "mediawiki-vcn",
             "dns_label": "mediawiki",
             "freeform_tags": {},
-            "id": "ocid1.vcn.oc1.iad.amaaaaaaw3ikaaqak3u57mvtvpmvtjpejjvyji7ruavo6wow6wnhkyslb2pq",
+            "id": "ocid1.vcn.oc1.iad.amaaaaaalwlrxmyaddzl6adtry6rtfq4vtnfjwiekoalg7vznz75crz77vlq",
             "ipv6cidr_block": null,
             "ipv6public_cidr_block": null,
             "is_ipv6enabled": null,
             "state": "AVAILABLE",
-            "time_created": "2020-09-02 07:20:29.86 +0000 UTC",
+            "time_created": "2020-09-02 07:18:20.173 +0000 UTC",
             "timeouts": null,
             "vcn_domain_name": "mediawiki.oraclevcn.com"
           },
