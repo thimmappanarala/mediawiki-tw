@@ -33,7 +33,7 @@ resource "oci_core_instance" "mediawiki_vm" {
     }
  
     inline = [
-      "sudo yum install -y git",
+      "sudo yum install -y git ansible",
       "sudo git clone https://github.com/thimmappanarala/mediawiki-tw.git /root/mediawiki-tw",
       "sudo ansible-playbook /root/mediawiki-tw/build.yaml",
       "sudo -H ansible-playbook /root/mediawiki-tw/mariadb_sql.yaml",

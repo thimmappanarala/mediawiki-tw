@@ -1,4 +1,4 @@
 - hosts: localhost
   tasks:
     - name: execute sql for db
-      command: docker exec  mariadb-tw-v1 sh -c /root/mariadb.sql
+      command: docker exec mariadb-tw-v1 mysql -u root -pabcd1234 -e "CREATE USER 'wiki'@'localhost' IDENTIFIED BY 'abcd1234';CREATE DATABASE wikidatabase;GRANT ALL PRIVILEGES ON wikidatabase.* TO 'wiki'@'localhost';SHOW DATABASES;SHOW GRANTS FOR 'wiki'@'localhost';"
